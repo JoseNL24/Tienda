@@ -1,0 +1,157 @@
+:root{
+    --azul:#134074;
+    --azulOscuro:#0B2545;
+    --azulGris:#8DA9C4;
+    --blanco:#fff;
+    --fuente:'Quicksand', sans-serif;
+}
+html{
+    box-sizing: border-box;
+}
+
+*,*::after, *::before{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuente);
+    background-color: var(--azulOscuro);
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor{
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 95%;
+}
+
+
+.imagen-formulario{
+    background-image: url('../img/login.jpg');
+    background-position: center center;
+    background-size: cover;
+    height: 200px;
+    flex: 0 0 calc(60%);
+    position: relative;  
+}
+
+.imagen-formulario::before{
+   content: '';
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background: linear-gradient(to right,rgba(141,169,196,.5), rgba(19, 64, 116, .5) );
+   
+}
+
+@media(min-width:768px){
+    .imagen-formulario{
+        height: auto;
+        background-position: right;
+    }
+
+}
+@media(min-width:1200px){
+    .imagen-formulario{
+        background-position: center;
+    }
+}
+
+@media(min-width:768px){
+    .contenedor-formulario{
+        display: flex;
+    }
+}
+
+.formulario{
+    padding: 50px;
+    background-color: var(--azul);
+}
+.texto-formulario h2, .input label, .password-olvidada a, .texto-formulario p{
+    color: var(--blanco);
+}
+.texto-formulario h2{
+    font-size: 40px;
+    text-align: center;
+}
+.texto-formulario p{
+    font-size: 18px;
+    text-align: center;
+}
+.input label{
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
+}
+.password-olvidada a{
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 15px;
+}
+.input input{
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 5px;
+    outline: none;
+}
+.input input[type="submit"]{
+    background-color: var(--azulGris);
+    color: var(--blanco);
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    margin-top: 20px;
+    transition: background-color .3s ease-in-out;
+}
+.input input[type="submit"]:hover{
+  
+    cursor: pointer;
+    background-color: var(--azulOscuro);
+}
+
+
+.connect{
+    color: var(--blanco);
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.facebook{
+    color: var(--blanco);
+    float: left;
+    margin-right: 70px;
+    margin-left: 10px;
+    font-size: 40px;
+}
+
+.google{
+    color: var(--blanco);
+    float: left;
+    margin-right: 70px;
+    font-size: 40px;
+}
+
+.github{
+    color: var(--blanco);
+    float: left;
+    font-size: 40px;
+}
+
+.logos{
+    margin-top: 20px;
+}
+
+
+.espacio{
+    margin-left: 80px;
+    padding-left: 80px;
+}

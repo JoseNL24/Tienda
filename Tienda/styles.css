@@ -1,0 +1,70 @@
+/* Reset de estilos */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff; /* Fondo blanco */
+    color: #333; /* Texto en gris oscuro */
+}
+
+header {
+    background-color: #333; /* Fondo negro */
+    color: #fff; /* Texto en blanco */
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    background-color: #333; /* Fondo negro */
+    list-style: none;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff; /* Texto en blanco */
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
+section h2 {
+    color: #333; /* Texto en gris oscuro */
+}
+
+ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+footer {
+    background-color: #333; /* Fondo negro */
+    color: #fff; /* Texto en blanco */
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilo para botones */
+button, a.button {
+    background-color: #333; /* Fondo negro */
+    color: #fff; /* Texto en blanco */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover, a.button:hover {
+    background-color: #555; /* Fondo gris oscuro al pasar el mouse */
+}
+
+

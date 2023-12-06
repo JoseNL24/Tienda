@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/estilosLogin.css"/>
+
+  
+
+</head>
+<body>
+    <div class="contenedor-formulario contenedor">
+      <div class="imagen-formulario">
+      </div>
+
+      <form class="formulario" action="backend/inicioSesion.php" method="POST">
+        <div class="texto-formulario">
+          <h2>Bienvenido</h2>
+          <p>Inicia sesión con tu cuenta</p>
+        </div>
+        <div class="input form-group">
+          <label for="usuario">Correo electrónico</label>
+          <input placeholder="Ingresa tu nombre" type="text" id="usuario" name="usuario" class="form-control">
+        </div>
+        <div class="input form-group">
+          <label for="contrasena">Contraseña</label>
+          <input placeholder="Ingresa tu contraseña" type="password" id="contrasena" name="contrasena" class="form-control">
+        </div>
+        <div class="password-olvidada form-group">
+          <a href="recuperarContrasena.html">¿Olvidaste tu contraseña?</a>
+        </div>
+        <div class="input form-group">
+          <input type="submit" value="Login">
+        </div>
+
+        <div class="conectar">
+          <div class="connect">Connect with</div>
+          <!-- Facebook Login -->
+          <div class="logos">
+            <a href="https://es-la.facebook.com/L" class="facebook">
+              <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+            </a> 
+            <!-- Google Login -->
+            <a href="YOUR_GOOGLE_LOGIN_URL" class="google">
+              <i class="fa-brands fa-google" aria-hidden="true"></i>
+            </a> 
+            <a href="https://www.web-leb.com/code" class="github">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+          </div>
+          
+        </div>
+      </form>
+    </div>
+ 
+  <script src="/js/main.js"></script>
+</body>
+</html>

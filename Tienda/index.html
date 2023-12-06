@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Ropa Interior para Caballero</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Asegúrate de tener la versión correcta de FontAwesome -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <style>
+        /* Estilos adicionales si es necesario */
+        .detalle-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .detalle-info {
+            text-align: center;
+        }
+
+        .swiper-slide {
+    margin: 0 5px; /* Ajusta el margen entre las diapositivas */
+    box-sizing: border-box; /* Evita que el margen agregue espacio adicional */
+}
+
+        .swiper-slide img {
+            width: 500px;
+            height: 500px;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tienda de Ropa Interior para Caballero</h1>
+        <p>¡Descubre la mejor selección de ropa interior masculina!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#nosotros">Sobre Nosotros</a></li>
+            <li><a href="login.html">Acceder</a></li>
+
+
+         
+        </ul>
+    </nav>
+
+    <section id="inicio">
+        <h2>Bienvenido a nuestra tienda de ropa interior para caballero</h2>
+        <p>En nuestra tienda, ofrecemos una amplia gama de ropa interior de alta calidad diseñada especialmente para hombres. Nuestra misión es proporcionarte comodidad, estilo y confianza en cada prenda que elijas.</p>
+    </section>
+
+<form id="registroForm" method="POST" action="backend/registro.php">
+    <section id="productos">
+            <h2>Nuestros Productos</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper" id="swiperWrapper">
+                    <!-- Los productos se generarán aquí dinámicamente -->
+                    <div class="swiper-slide form-control" onclick="mostrarDetallesProducto('boxer  kangolonfeccionados en corte comodo y ligero con materiales textiles duraderos y confiables ', 150, 5)" >
+                        <img src="img/producto1.jpeg" alt="Producto 1">
+                        <input type="hidden" name="id" value="1">
+                    </div>
+                    <div class="swiper-slide form-control" onclick="mostrarDetallesProducto('boxer cavin klein Comodidad para el día al día en microfibra suave con soporte superior', 657, 30)">
+                        <img src="img/producto2.jpg" alt="Producto 2" >
+                        <input type="hidden" name="id2" value="2">
+                    </div>
+                    <div class="swiper-slide" onclick="mostrarDetallesProducto('boxer optima Silueta con ajuste perfecto', 45, 5)">
+                        <img src="img/producto3.jpeg" alt="Producto 3" >
+                        <input type="hidden" name="id3" value="3">
+                    </div>
+                    <div class="swiper-slide" onclick="mostrarDetallesProducto('boxer hanes proporcionan un tacto suave y transpirable con tela cómoda que es más suave que nunca', 200, 5)">
+                        <img src="img/producto4.jpg" alt="Producto 4" >
+                        <input type="hidden" name="id4" value="4">
+                    </div>
+                    <div class="swiper-slide" onclick="mostrarDetallesProducto('boxer jam modal ultra suave que es increíble al tacto y que absorbe la humedad', 700, 10)">
+                        <img src="img/producto5.jpeg" alt="Producto 5">
+                        <input type="hidden" name="id5" value="5">
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section id="nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos una tienda de ropa interior para caballero comprometida con la satisfacción del cliente. Nuestro equipo está dedicado a ofrecer productos de calidad y un excelente servicio al cliente. Valoramos la privacidad y la comodidad de nuestros clientes.</p>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>¿Tienes alguna pregunta o comentario? No dudes en ponerte en contacto con nosotros. Estamos disponibles para ayudarte en cualquier momento.</p>
+        <p>Correo electrónico: info@tiendaropainteriorcaballero.com</p>
+        <p>Teléfono: +123-456-7890</p>
+    </section>
+
+    <div class="detalle-overlay" id="detalleProducto">
+        <div class="detalle-info">
+            <h3>Detalles del Producto</h3>
+            <p id="nombreProducto"></p>
+            <p id="precioProducto"></p>
+            <p id="descuentoProducto"></p>
+            <button id="agregarCarrito">Agregar al Carrito</button>
+        </div>
+    </div>
+
+    </form>
+
+    <footer>
+        <p>Derechos de autor &copy; 2023 Tienda de Ropa Interior para Caballero</p>
+    </footer>
+
+    <script>
+        var carrito = [];
+
+        function mostrarDetallesProducto(nombre, precio, descuento) {
+            $('#nombreProducto').text('Nombre: ' + nombre);
+            $('#precioProducto').text('Precio: $' + precio);
+            $('#descuentoProducto').text('Descuento: %' + descuento);
+            $('#detalleProducto').show();
+
+            $('#agregarCarrito').off().on('click', function() {
+                // Calcular el precio final con descuento
+                var precioFinal = precio - (precio * (descuento / 100));
+
+                // Agregar el producto al carrito con su precio y descuento
+                carrito.push({ nombre: nombre, precio: precioFinal, descuento: descuento });
+
+                alert('Producto agregado al carrito. Precio final: $' + precioFinal.toFixed(2));
+
+                $('#detalleProducto').hide();
+            });
+        }
+    </script>
+</body>
+</html>

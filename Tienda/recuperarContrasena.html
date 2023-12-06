@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/estilosLogin.css"/>
+
+<style type="text/css">
+  .espacio{
+    justify-content: center;
+}
+</style>
+  
+
+</head>
+<body>
+    <div class="contenedor-formulario contenedor espacio">
+      <form class="formulario" action="backend/inicioSesion.php" method="POST">
+        <div class="texto-formulario">
+          <h2>¿Te olvidaste de tu contraseña?</h2>
+          <p>¡No te preocupes! Escribe tu email personal y recibe instrucciones para recuperarla </p>
+        </div>
+        <div class="input form-group">
+          <label for="usuario">Correo electrónico</label>
+          <input placeholder="Email" type="text" id="email" name="email" class="form-control">
+        </div>
+        <div class="input form-group">
+          <input type="submit" value="Recuperar contraseña">
+        </div>
+      </form>
+    </div>
+ 
+  <script src="/js/main.js"></script>
+</body>
+</html>
